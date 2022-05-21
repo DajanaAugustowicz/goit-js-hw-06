@@ -17,6 +17,10 @@ const images = [
   },
 ];
 
-const markup = images.map((image) => `<li class="list-item new"><img ${image} /></li>`).join("");
+const markup = images.map(({ url, alt }) => 
+`<li class="gallery-item"><img class="gallery-img" src="${url}" alt="${alt}"/></li>`).join("");
 
-list.insertAdjacentHTML("afterbegin", markup);
+list.insertAdjacentHTML("beforeend", markup);
+
+list.style.display = "flex";
+list.style.flexDirection = "row";
