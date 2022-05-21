@@ -11,19 +11,9 @@ const ingredients = [
   'Condiments',
 ];
 
-const markup = ingredients
-  .map((ingredient) => `<li class="list-item new">${ingredient}</li>`)
-  .join("");
-
-list.insertAdjacentHTML("afterbegin", markup);
-
-//ingredients.forEach(function (ingredient, index) {
-// console.log(ingredient, index)
-//});
-
-//const item = document.createElement("li");
-//item.textContent = [...ingredients];
-//item.classList.add("item");
-//list.after(item);
-
-//console.log(item);
+ingredients.map((ingredient) => { 
+  const item = document.createElement("li"); 
+  item.textContent = ingredient;
+  item.classList.add("item");
+  list.append(item);
+});
