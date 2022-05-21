@@ -1,3 +1,7 @@
+"use strict"; 
+
+const list = document.querySelector(".gallery"); 
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +16,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const markup = images.map((image) => `<li class="list-item new"><img ${image} /></li>`).join("");
+
+list.insertAdjacentHTML("afterbegin", markup);
