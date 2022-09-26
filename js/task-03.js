@@ -22,5 +22,5 @@ const markup = images.map(({ url, alt }) =>
 
 list.insertAdjacentHTML("beforeend", markup);
 
-list.style.display = "flex";
-list.style.flexDirection = "row";
+list.style.display = "flex"; 
+list.style.flexDirection = "column"; 
